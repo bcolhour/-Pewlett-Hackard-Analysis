@@ -223,3 +223,9 @@ FROM dept_info AS di
 WHERE (di.dept_name = 'Sales');
 
 SELECT * FROM departments
+
+SELECT di.emp_no, di.first_name, di.last_name, di.dept_name
+INTO sales_dev_info
+FROM dept_info AS di
+WHERE di.dept_name IN ('Sales', 'Development');
+SELECT * FROM sales_dev_info
